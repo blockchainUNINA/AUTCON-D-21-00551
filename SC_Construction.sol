@@ -32,8 +32,8 @@ mapping (bytes32 => Transmission) private docHashes;
 mapping (address => Actor) private ActorList;
 
 constructor() {
-Actor memory newActor =Actor (0xd267fF54562ff2C14Aff9D8f2F01d4883282Cfd6,0xe620103cbd446307acee11e21d83a6e23db307a4549b06d2442a1b728c4601dc,true);
-ActorList[0xd267fF54562ff2C14Aff9D8f2F01d4883282Cfd6] = newActor;
+Actor memory newActor =Actor (msg.sender,0xe620103cbd446307acee11e21d83a6e23db307a4549b06d2442a1b728c4601dc,true);
+ActorList[msg.sender] = newActor;
 }
 
 //Add Actor
